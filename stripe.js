@@ -7,7 +7,7 @@ export function createSource() {
     stripe.sources.create(
       {
         type: 'alipay',
-        amount: 5,
+        amount: 50,
         currency: 'usd',
         owner: {
           email: 'admin.test@mail.com',
@@ -58,7 +58,7 @@ export function chargePayment(sourceId, customer) {
   return new Promise((resolve, reject) => {
     stripe.charges.create(
       {
-        amount: 5,
+        amount: 50,
         description: 'Sample Charge',
         currency: 'usd',
         source: sourceId,
