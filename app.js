@@ -18,6 +18,7 @@ app.set('view engine', 'pug')
 app.set('view engine', 'ejs')
 app.use(require('body-parser').urlencoded({ extended: false }))
 app.use(express.static(__dirname + '/public'))
+app.use(cors())
 console.log(__dirname)
 app.use(bodyParser.json())
 
