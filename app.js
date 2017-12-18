@@ -59,10 +59,13 @@ app.get('/confirm-user', async (req, res) => {
       const resultPayment = await chargePayment(result.id, result.customer)
       console.log('333333333', resultPayment.status)
       if (resultPayment.status === 'succeeded') {
-        res.send(true)
+        //res.render(true)
+        res.render('charge.pug')
       } else {
-        res.send(false)
+        res.render('error.pug')
       }
+    } else {
+      res.render('error.pug')
     }
     //console.log(result)
     // console.log('body', req.body)
