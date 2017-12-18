@@ -1,0 +1,27 @@
+doctype html
+html(lang="en")
+  head
+    title= pageTitle
+    script(src="https://js.stripe.com/v3/")
+    //- script(type='text/javascript').
+    //-   if (foo) bar(1 + 5)
+  body
+    form(action="/charge", method="post")
+    div(class="form-row")
+    label(for="card-element")
+      Credit or debit card
+    div(class="card-elment")
+    div(id="card-errors" role="alert")
+    button(type="submit")
+    h1 Pug - node template engine
+    //- #container.col
+    //-   if youAreUsingPug
+    //-     p You are amazing
+    //-   else
+    //-     p Get on it!
+    //-   p.
+    //-     Pug is a terse and simple templating language with a
+    //-     strong focus on performance and powerful features.
+    //- script.
+    //-   const stripe = Stripe('pk_test_qghYMOBiEuWIDjedt7DNPA0w');
+    //-   const elements = stripe.elements();
